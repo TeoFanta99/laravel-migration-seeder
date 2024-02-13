@@ -3,5 +3,12 @@
     <title>Home</title>
 @endsection
 @section('content')
-    <h1>Hello, World!</h1>
+    <h1>Trains: </h1>
+    <ul>
+        @foreach ($trains as $train)
+            <li>
+                {{$train -> stazione_di_partenza}}
+            </li>
+        @endforeach
+    </ul>
 @endsection
