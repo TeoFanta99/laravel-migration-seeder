@@ -11,7 +11,8 @@ class MainController extends Controller
 {
     public function index() {
 
-        $trains = Train :: all();
+        // $trains = Train :: all();
+        $trains = Train :: whereDate('orario_di_partenza', now() -> toDateString()) -> get();
 
         return view('pages.index', compact('trains'));
     }
